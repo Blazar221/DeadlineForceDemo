@@ -14,7 +14,7 @@ public class Obstacle : MonoBehaviour
     void Start()
     {
         prevPosition = transform.position;
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 4f);
     }
 
     // Update is called once per frame

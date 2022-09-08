@@ -22,10 +22,9 @@ public class ObstacleSpawner : MonoBehaviour
     }
 
     private void SpawnNewObstacle(){
-        float randXPos = Random.Range(0f, 2f);
-        float randYPos = Random.Range(7, 8f);
+        float randXPos = Random.Range(-7f, 7f);
 
-        Vector3 spawnPosition = new Vector3(randXPos, randYPos, 0);
+        Vector3 spawnPosition = new Vector3(randXPos, 4.5f, 0);
         GameObject newObstacle = Instantiate(obstacle, spawnPosition, Quaternion.identity);
     }
 }
