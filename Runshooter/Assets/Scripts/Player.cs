@@ -8,6 +8,11 @@ public class Player : MonoBehaviour
     private Rigidbody2D heroRb;
     private Vector2 heroDir;
 
+    [SerializeField]
+    private float halfWidth = 7.6f;
+    [SerializeField]
+    private float halfHeight = 4.3f;
+
     // Start is called before the first frame update
     void Start() {
         heroRb = GetComponent<Rigidbody2D>();
@@ -22,5 +27,12 @@ public class Player : MonoBehaviour
 
     void FixedUpdate() {
         heroRb.velocity = new Vector2(heroDir.x * heroSpeed, heroDir.y * heroSpeed);
+    }
+
+    private void LateUpdate() {
+        Vector3 curPosition = transform.position;
+        curPosition.x = Mathf.Clamp(curPosition.x, -halfWidth, halfWidth);
+        curPosition.y = Mathf.Clamp(curPosition.y, -halfHeight, halfHeight);
+        transform.position = curPosition;
     }
 }
