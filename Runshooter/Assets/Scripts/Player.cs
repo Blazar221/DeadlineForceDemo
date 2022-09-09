@@ -9,9 +9,9 @@ public class Player : MonoBehaviour
     private Vector2 heroDir;
 
     [SerializeField]
-    private float halfWidth = 7.6f;
+    private float halfWidth = 7.3f;
     [SerializeField]
-    private float halfHeight = 4.3f;
+    private float halfHeight = 4.5f;
 
     // Start is called before the first frame update
     void Start() {

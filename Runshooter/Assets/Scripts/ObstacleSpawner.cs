@@ -24,7 +24,7 @@ public class ObstacleSpawner : MonoBehaviour
     private void SpawnNewObstacle(){
         float randXPos = Random.Range(-7f, 7f);
 
-        Vector3 spawnPosition = new Vector3(randXPos, 4.5f, 0);
+        Vector3 spawnPosition = new Vector3(randXPos, 5.5f, 0);
         GameObject newObstacle = Instantiate(obstacle, spawnPosition, Quaternion.identity);
     }
 }
